@@ -1,0 +1,47 @@
+
+.container1{
+    display: flex;
+    width:60% ;
+    margin: auto;
+    margin-top: 50px;
+    border: 1px solid grey;
+   
+    
+    -moz-box-shadow: 10px 10px 7px -2px rgb(38, 180, 168);
+    
+    background-color: rgb(255, 255, 255);
+}   
+.container1 img{
+    width:55% ;
+    height: 650px; 
+}
+.container1 h2{
+    align-self: center;
+    color:rgb(0, 161, 121);
+}
+
+.container2{
+    align-self: center;
+    margin-left: 50px;
+}
+.container2 h2{
+        font-size:xx-large;
+}
+.container2 button{
+    margin-left: 60px;
+    color: rgb(225, 40, 7);
+    font-size:1em;
+}
+#landbutton{
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: rgb(0, 128, 124);
+}
+#landbutton:hover{
+    color:white;
+    background-color: rgb(47, 137, 255);
+}
+ 
+
+  
