@@ -2,6 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const postModal = require("./postmodal");
+const dotenv = require("dotenv");
+dotenv.config();
 const app = express();
 mongoose.set("strictQuery", false);
 
@@ -14,8 +16,7 @@ app.listen(process.env.PORT || 3002, (err) => {
     console.log("Server is started at 3002");
   } else console.log(err);
 });
-const mongodb =
-  "mongodb+srv://MOUNEEL213:mouneel2purkas@project-1.vmb9zsr.mongodb.net/instagram?retryWrites=true&w=majority";
+const mongodb = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@project-1.vmb9zsr.mongodb.net/instagram?retryWrites=true&w=majority`;
 mongoose.connect(
   mongodb,
   (data) => {
@@ -53,7 +54,7 @@ app.post("/postdata", (req, res) => {
       author: req.body.author,
       location: req.body.location,
       image: req.body.image,
-      likes: Math.round(Math.random() * 10),
+      likes: Math.round(Math.random() * 100),
       date: setday,
       description: req.body.description,
     })
